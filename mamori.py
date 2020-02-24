@@ -7,7 +7,7 @@ import random
 client = discord.Client()
 text_channel = 315744357049303042  #じぇねらるのid
 my_id =   #自分のid
-token = 
+token =
 
 text_chat = discord.Object(id=text_channel)
 
@@ -26,72 +26,71 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	await client.send_messages(member,'ようこそ、Planetside2 UDONサーバーへ！！サーバーに参加するにあたり、読んでねチャンネルを一読ください')
-	
+	await member.send('ようこそ、Planetside2 UDONサーバーへ！！サーバーに参加するにあたり、読んでねチャンネルを一読ください')
 
 @client.event
 async def on_message(message):
 	if message.content.startswith("ただいま"):
 	    if client.user != message.author:
 	    	m = "おかえりなさい" + message.author.name + "さん"
-	    await client.send_messages(message.channel, m)
+	    await message.channel.(m)
 
 	elif message.content.startswith("おやすみ"):
 	    if client.user != message.author:
         	n = "おやすみなさいませ" + message.author.name + "さん"
-	        await client.send_messages(message.channel, n)
+	        await message.channel.(n)
 
 
 	elif message.content.startswith("あへ"):
 	    if client.user != message.author:
         	o = "✌(´◓ｑ◔｀)✌" + message.author.name + "さん"
-	        await client.send_messages(message.channel, o)
+	        await message.channel.(o)
 
 
 	elif message.content.startswith("おはよう"):
 	    if client.user != message.author:
         	p = "おはようございます" + message.author.name + "さん"
-	        await client.send_messages(message.channel, p)
+	        await message.channel.(p)
 
 
 	elif message.content.startswith("おちます"):
 	    if client.user != message.author:
         	q = "いってらっしゃい" + message.author.name + "さん"
-	        await client.send_messages(message.channel, q)
+	        await message.channel.(q)
 
 
 	elif message.content.startswith("こんにち"):
 	    if client.user != message.author:
         	r = "こんにちは" + message.author.name + "さん"
-	        await client.send_messages(message.channel, r)
+	        await message.channel.(r)
 
 
 	elif message.content.startswith("VS"):
 	    if client.user != message.author:
         	s = ["ヴぁぬー", "Papa Vanuはあなたを見守っています", "Vanuはあなたに微笑みかけます", "その兵士、紫の力を纏いて・・・"]
 	        s2 = random.choice(s)
-        	await client.send_messages(message.channel, s2)
+        	await message.channel.(s2)
 
 
 	elif message.content.startswith("お茶"):
 	    if client.user != message.author:
         	t = ["( ^-^)_旦", "(*^ｰ)_旦~~ｵﾁｬﾊｲｶｶﾞ?", "\お茶でも ( ^-^)o旦~~ どぞ ♪ > 皆の衆", "―＝三(*^ー)_旦~~ ﾍｲ! ｱｶﾞﾘｲｯﾁｮｳ!!", "ﾏｧﾏｧ､ｵﾋﾄﾂ(*￣ー￣)_凸", "ｵﾁｬﾄﾞｿﾞ ( ﾟдﾟ)_旦~)`νﾟ)･;'ｱﾁﾁ!!", "( ^-)_旦~~ ﾊｲ､ｻﾞﾊﾞｰ(;･_･)/◇⌒ﾐﾐﾐ ｼﾏｯﾀ!", "(* ^^)ノ±■　コーヒー飲む？"]
 	        t2 = random.choice(t)
-        	await client.send_messages(message.channel, t2)
+        	await message.channel.(t2)
 
 
 	elif message.content.startswith("眠い"):
 	    if client.user != message.author:
         	u = ["起きてぇぇぇ！！！！", "布団、用意しましたよ♡", "ｽﾔｧｧ・・・", "そろそろ寝ましょう！", "(=_ヾ) ﾈﾑﾈﾑｩ", "(ρ_･).｡o○ねみゅいのｰ･･", "Ｚｚｚ (￣～￣) （マス・・タァ・・）"]
 	        u2 = random.choice(u)
-        	await client.send_messages(message.channel, u2)
+        	await message.channel.(u2)
 
 
 	elif message.content.startswith("はっくし"):
 	    if client.user != message.author:
         	v = ["あらあら大丈夫ですか？ハンカチどうぞ～", "くしゅん・・・移っちゃいました///", "寒い・・・ですか？", "体調にお気をつけてくださいね！"]
 	        v2 = random.choice(v)
-        	await client.send_messages(message.channel, v2)
+        	await message.channel.(v2)
 
 client.run('token')
 
