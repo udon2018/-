@@ -8,12 +8,10 @@ client = discord.Client()
 text_channel = 315744357049303042  #じぇねらるのid
 my_id =   #自分のid
 token =
-
-text_chat = discord.Object(id=text_channel)
-
-
+text_chat = None
 @client.event
 async def on_ready():
+	global text_chat = get_channel(text_channel)
 	print ('Logged in as')
 	print (client.user.name)
 	print (client.user.id)
